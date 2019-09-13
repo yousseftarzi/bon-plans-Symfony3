@@ -1,0 +1,32 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+{% block first %}   <div id="deal-section" class="container deal-section">
+    <div class="section-padding"></div>
+    <div class="section-header">
+        <h1>Liste des Abonnements</h1>
+        <table border="4" cellpadding="10" cellspacing="1" width="100%">
+            <tr>
+                <td width="20%" align="center"><i>ID</i></td>
+                <td width="20%" align="center"><i>Idsource</i></td>
+                <td width="20%" align="center"><i>IdAbonne</i></td>
+
+
+            </tr>
+
+
+            {% for Abonnement in Abonnements %}
+
+                <tr>
+                    <td width="20%" align="center">  {{ Abonnement.id }} </td>
+                    <td width="20%" align="center">  {{ Abonnement.IdAbonne}} </td>
+                    <td width="20%" align="center">  {{ Abonnement.Idsource}} </td>
+
+
+                </tr>
+
+            {% endfor %}
+        </table>
+
+    </div>
+
+
+{% endblock %}

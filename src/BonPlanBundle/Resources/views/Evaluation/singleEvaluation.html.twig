@@ -1,0 +1,48 @@
+
+{% extends "BonPlanBundle:Default:Base.html.twig" %}
+{% block first %}
+    <div class="centrer">
+        <h1 > Evaluation Moyenne {{ notesMoyennes[1].idProfessionnel.username }} </h1>
+    </div>
+
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="table100 ver2 m-b-110">
+                        <div class="table100-head">
+                            <table >
+                                <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column1">Nom</th>
+                                    <th class="cell100 column1">Action</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table100-body js-pscroll">
+                            <table >
+                                <tbody>
+                                {% for note in notesMoyennes %}
+                                    <tr>
+                                        <td>{{  note.idCritere.nom }}</td>
+                                        <td><input type="number" width="500" size="5" value="1" min="1" max="5" name={{  note.note  }} disabled />  </td>
+                                    </tr>
+                                {% endfor %}
+
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+{% endblock %}
+
+
+

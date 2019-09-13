@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class=""><!--<![endif]-->
+
+<!-- Mirrored from premiumlayers.net/demo/html/geodeo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 13:17:59 GMT -->
+{% block css %}
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Home -Geo</title>
+        <!--===============================================================================================-->
+
+        <!-- Standard Favicon -->
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/espritparc/images/favicon.ico')}}" />
+        <!-- For iPhone 4 Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('bundles/espritparc/images/apple-touch-icon-114x114-precomposed.png')}}">
+        <!-- For iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('bundles/espritparc/images/apple-touch-icon-72x72-precomposed.png')}}">
+        <!-- For iPhone: -->
+        <link rel="apple-touch-icon-precomposed" href="{{ asset('bundles/espritparc/images/apple-touch-icon-57x57-precomposed.png')}}">
+        <!-- Library - Bootstrap v3.3.5 -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/libraries/lib.css')}}">
+        <!-- StrockGap Icon Fonts -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/libraries/strokegapicon/stroke-gap-icon.css')}}">
+        <!-- Google Fonts -->
+
+        <!-- Custom - Theme CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/style.css')}}">
+
+        <!--[if lt IE 9]>
+        <script src="{{ asset('bundles/espritparc/js/html5/respond.min.js')}}"></script>
+        <![endif]-->
+        <link href="{{ asset('front/calendar/css/fullcalendar.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('front/calendar/css/fullcalendar.print.css') }}" rel="stylesheet" media="print"/>
+
+        <style>
+            .slidecontainer {
+                width: 100%;
+            }
+
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 10px;
+                border-radius: 5px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+
+            .slider:hover {
+                opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 23px;
+                height: 24px;
+                border: 0;
+                background: url('{{ asset('bundles/espritparc/images/apple-touch-icon-57x57-precomposed.png') }}');
+                cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+                width: 23px;
+                height: 24px;
+                border: 0;
+                background: url('{{ asset('bundles/espritparc/images/apple-touch-icon-57x57-precomposed.png') }}');
+                cursor: pointer;
+            }
+        </style>
+
+
+
+
+    </head>
+{% endblock %}
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+<!-- LOADER -->
+<div id="site-loader" class="load-complete">
+    <div class="loader">
+        <div class="loader-inner ball-triangle-path">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div><!-- Loader /- -->
+{% block menu %}
+    <!-- Header -->
+    <header class="header-main container-fluid no-padding">
+        <div class="menu-block">
+            <div class="menu-left-bg"></div>
+            <div class="container">
+                <!-- Navigation -->
+                <nav class="navbar ow-navigation">
+                    <div class="col-md-3 no-padding">
+                        <div class="navbar-header">
+                            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a title="Logo" href="{{ asset('bundles/espritparc/index.html')}}" class="navbar-brand"><img src="{{ asset('bundles/espritparc/images/logo.png')}}" alt="logo" width="43" height="51"/><span>Geodeo</span></a>
+                            <a href="{{ asset('bundles/espritparc/index.html')}}" class="mobile-logo" title="Logo"><h3>Geodeo</h3></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menuinner no-padding">
+                        <div class="navbar-collapse collapse" id="navbar">
+                            <ul class="nav navbar-nav menubar">
+                                <li><a title="Home" href="{{ path('home')}}">Home</a></li>
+                                <li><a title="Deals" href="{{ path('Deals')}}">Deals</a></li>
+
+                                <li><a title="Shops" href="{{ path('categories')}}">Categories</a></li>
+                                <li><a title="Shops" href="{{ path('listBonPlanneur')}}">Classement</a></li>
+                                <li><a title="Shops" href="{{ path('liste_Professionnel')}}">Liste Professionnels</a></li>
+
+                                <li><a title="Categories" href="{{ path('profile')}}">Profile</a></li>
+                                <li class="dropdown">
+                                    <a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Reservation" href="#">Reservation</a>
+                                    <i class="ddl-switch fa fa-angle-down"></i>
+                                    <ul class="dropdown-menu">
+                                        <li><a title="Liste" href="{{ path('aff') }}">votre Liste</a></li>
+                                        <li><a title="" href="coupons-page.html">Reserver </a></li>
+                                        <li><a title="calendrier" href="{{ path('calen')}}">calandrier</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+
+                                    <i class="ddl-switch fa fa-angle-down"></i>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav><!-- Navigation /- -->
+                <div class="user-cart">
+                    <a href="{{ path('register') }}" title="Register"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href="{{ path('login') }}" title="Login" ><i class="fa fa-user" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </header><!-- Header /- -->
+             <!-- Photobanner -->
+
+    <div class="container-fluid no-padding photobanner">
+        <div id="home-slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                {% block slider %}
+                    <div class="item active">
+                        <img src="{{ asset('bundles/espritparc/images/photoslider1.jpg')}}" alt="slide1" width="1920" height="901"/>
+                    </div>
+                    <div class="item">
+                        <img src="{{ asset('bundles/espritparc/images/photoslider1.jpg')}}" alt="slide1" width="1920" height="901"/>
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+        <div class="container">
+            <form method="post" action="{{ path('recherche') }}">
+                <div class="photobanner-content">
+                    <h3>The #one place to save your money</h3>
+                    <p>save money with the best coupons and offers for more than 2000 online stores</p>
+                    <div class="input-group-btn">
+                        <input id="name" name="name" type="text" class="form-control" placeholder="Nom de BonPlan..."style="margin-bottom: 10px"required>
+                        <input id="smile" name="smile" type="text" class="form-control" placeholder="Nom de BonPlan..."style="display: none" value="3" >
+                        <h3>Nombre de coupon</h3>
+
+                        <div class="slidecontainer">
+                            <input name="myRange" type="range" min="1" max="100" value="10" class="slider" id="myRange">
+                            <p><span id="demo"></span> Coupon</p>
+                        </div>
+
+                        <span class="input-group-btn"style="float:right">
+						<button class="btn" title="Search" type="submit"style="float:right" >Search</button>
+					</span>
+                        <img id="h" src="{{ asset('smiley/h1.png') }}" >
+                        <img id="n" src="{{ asset('smiley/n2.png') }}">
+                        <img id="s" src="{{ asset('smiley/s2.png') }}">
+
+
+                    </div>
+
+                </div>
+            </form>
+            </div>
+        </div>
+    </div><!-- Photobanner /- -->
+{% endblock %}
+<!-- Deal Section -->
+{% block first %}
+    <!-- Deal Section /- -->
+{% endblock %}
+
+
+{% block second %}
+{% endblock %}
+
+<!-- PopularCategory -->
+{% block third %}
+
+{% endblock %}
+<!-- ShopTrading -->
+{% block fourth %}
+
+{% endblock %}
+<!-- LatestBlog -->
+{% block fifth %}
+
+{% endblock %}
+<!-- GetOffers -->
+{% block sixth %}
+{% endblock %}
+<!-- Counter Section -->
+{% block seventh %}
+{% endblock %}
+<!-- Footer Main -->
+{% block footer %}
+    <footer class="footer-main container-fluid no-padding">
+        <div class="footer-main-block">
+            <!-- Container -->
+            <div class="container">
+                <div class="row">
+                    <!-- Support Center -->
+                    <aside class="col-md-2 col-sm-6 col-xs-6 ftr-widget widget_support">
+                        <h3 class="widget-title">Support Center</h3>
+                        <ul>
+                            <li><a title="Using a Coupon" href="#">Using a Coupon</a></li>
+                            <li><a title="Submitting a Coupon" href="#">Submitting a Coupon</a></li>
+                            <li><a title="Managing My Account" href="#">Managing My Account</a></li>
+                            <li><a title="Merchant Help" href="#">Merchant Help</a></li>
+                        </ul>
+                    </aside><!-- Support Center /- -->
+
+                    <!-- Speical Pages -->
+                    <aside class="col-md-3 col-sm-6 col-xs-6 ftr-widget widget_pages">
+                        <h3 class="widget-title">Speciality pages</h3>
+                        <ul>
+                            <li><a title="Black Friday Deals" href="#">Black Friday Deals</a></li>
+                            <li><a title="Cyber Monday Deals" href="#">Cyber Monday Deals</a></li>
+                            <li><a title="Christmas Sales" href="#">Christmas Sales</a></li>
+                            <li><a title="Free Shipping" href="#">Free Shipping</a></li>
+                        </ul>
+                    </aside><!-- Speical Pages /- -->
+
+                    <!-- ContactUs -->
+                    <aside class="col-md-3 col-sm-6 col-xs-6 ftr-widget widget_contactus">
+                        <h3 class="widget-title">Contact Us</h3>
+                        <div class="contactinfo-box">
+                            <i class="fa fa-map-marker"></i>
+                            <p>09 Design Street, Mitri, Victoria, Australia.</p>
+                        </div>
+                        <div class="contactinfo-box">
+                            <i class="fa fa-phone"></i>
+                            <p>
+                                <a title="0112345678" href="tel:+0112345678">+01 123 456 78</a>
+                                <a title="0112355689" href="tel:+0112355689">+01 123 556 89</a>
+                            </p>
+                        </div>
+                        <div class="contactinfo-box">
+                            <i class="fa fa-map-marker"></i>
+                            <p>
+                                <a href="mailto:xyz123@testing.com" title="Info@OurDomain.Com">Info@OurDomain.Com</a>
+                                <a href="mailto:xyz123@testing.com" title="Support@OurDomain.Com">Support@OurDomain.Com</a>
+                            </p>
+                        </div>
+                    </aside><!-- ContactUs /- -->
+
+                    <!-- NewsLetter Widget -->
+                    <aside class="col-md-4 col-sm-6 col-xs-6 ftr-widget widget_newsletter">
+                        <h3 class="widget-title">Subscribe</h3>
+                        <p>Got a dream and we just know now we're gonna make our dream come true</p>
+                        <div class="input-group">
+                            <input type="text" placeholder="Enter Address" class="form-control">
+                            <span class="input-group-btn">
+								<button type="button" title="Subscribe" class="btn">Go</button>
+							</span>
+                        </div>
+                    </aside><!-- NewsLetter Widget /- -->
+                </div>
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="footer-menu">
+                        <nav class="navbar ow-navigation">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div id="navbar2" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html" title="Home">Home</a></li>
+                                    <li><a href="#" title="About Us">About Us</a></li>
+                                    <li><a href="#" title="Services">Services</a></li>
+                                    <li><a href="#" title="Store">Stores</a></li>
+                                    <li><a href="#" title="Carres">Carres</a></li>
+                                    <li><a href="blog-page.html" title="Blog">Blog</a></li>
+                                    <li><a href="#" title="Press">Press</a></li>
+                                    <li><a href="#" title="List your business">List your business</a></li>
+                                    <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+                                    <li><a href="#" title="Terms or Serivces">Terms or serivces</a></li>
+                                    <li><a href="#" title="Sitemap">Sitemap</a></li>
+                                    <li><a href="contactus-page.html" title="Contact Us">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="footer-about">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 ftr-about">
+                                <h3 class="widget-title">About Us</h3>
+                                <p>Said Californ'y is the place you ought to be So they loaded up the truck and moved to Beverly. Hills that is. Swimmin' pools movie stars. Straightnin' the curves. Flatnin' the hills Someday the mountain might get ‘em but the law never will.</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 ftr-social">
+                                <h3 class="widget-title">Connect with us</h3>
+                                <ul>
+                                    <li><a title="Facebook" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a title="Twitter" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a title="Google Plus" data-toggle="tooltip" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a title="Linkedin" data-toggle="tooltip" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a title="Dribbble" data-toggle="tooltip" href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a title="Pinterest" data-toggle="tooltip" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--  Footer Bottom /- -->
+            </div><!-- Container /- -->
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright &copy; 2016 - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer><!-- Footer /- -->
+{% endblock %}
+<script src="{{ asset('front/calendar/js/jquery.min.js') }}"></script>
+
+<!-- JQuery v1.11.3 -->
+<script src="{{ asset('bundles/espritparc/js/jquery.min.js')}}"></script>
+<!--script src="js/jquery.knob.js"></script-->
+<script type="text/javascript" src="{{ asset('front/calendar/js/script.js') }}"></script>
+<!-- Library - Js -->
+<script src="{{ asset('bundles/espritparc/libraries/lib.js')}}"></script><!-- Bootstrap JS File v3.3.5 -->
+
+<!-- Library - Google Map API -->
+
+<!-- Library - Theme JS -->
+<script src="{{ asset('bundles/espritparc/js/functions.js')}}"></script>
+
+<script type="text/javascript" src="{{ asset('front/calendar/js/script.js') }}"></script>
+
+<script src="{{ asset('front/calendar/js/moment.min.js') }}"></script>
+<script src="{{ asset('front/calendar/js/fullcalendar.js') }}"></script>
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
+
+<script>
+    $('#h').on({
+        'click': function(){
+            $('#h').attr('src','{{ asset('smiley/h1.png') }}');
+            $('#n').attr('src','{{ asset('smiley/n2.png') }}');
+            $('#s').attr('src','{{ asset('smiley/s2.png') }}');
+            $('#smile').val("3");
+        }
+    });
+    $('#n').on({
+        'click': function(){
+            $('#h').attr('src','{{ asset('smiley/h2.png') }}');
+            $('#n').attr('src','{{ asset('smiley/n1.png') }}');
+            $('#s').attr('src','{{ asset('smiley/s2.png') }}');
+            $('#smile').val("2");
+        }
+    });
+    $('#s').on({
+        'click': function(){
+            $('#h').attr('src','{{ asset('smiley/h2.png') }}');
+            $('#n').attr('src','{{ asset('smiley/n2.png') }}');
+            $('#s').attr('src','{{ asset('smiley/s1.png') }}');
+            $('#smile').val("0");
+        }
+    });
+
+
+
+</script>
+</body>
+
+<!-- Mirrored from premiumlayers.net/demo/html/geodeo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 13:17:59 GMT -->
+</html>

@@ -1,0 +1,57 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+{% block first %}
+    {% trans_default_domain 'FOSUserBundle' %}
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    <div class="container featuredsignup">
+
+    <div class="row">
+    <div class="col-md-5">
+        <div class="featured-section">
+            <div class="section-header">
+                <h3>Get benifits by Joining with us</h3>
+                <p>Today's hot deals handpicked by our Team up!</p>
+            </div>
+            <form  class="signupform">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-6">
+                        <div class="form-group">
+                            {{ form_widget(form.email) }}
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 col-sm-12 col-xs-6">
+                        <div class="form-group">
+                            {{ form_widget(form.username) }}
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-7 col-sm-7 col-xs-6">
+                        <div class="form-group">
+                            {{ form_widget(form) }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 col-xs-6">
+                        <div class="form-group">
+                            <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div class="section-padding"></div>
+
+    </div>
+
+
+
+
+    {{ form_end(form) }}
+{% endblock %}

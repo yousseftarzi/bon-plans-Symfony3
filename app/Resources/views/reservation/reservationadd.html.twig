@@ -1,0 +1,35 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+
+{% block first %}
+
+<div class="modal-body">
+    {{ form_start(form) }}
+    <div class="control-group">
+        <label class="control-label" for="inputPatient">Bienvenue ☺☻☺</label>
+        <div class="field desc">
+
+
+            <h1 align="center" class="black"> le Bon Plan a reservé est</h1> <h1 align="center" style="color:red;">{{ reservations.idBonPlan }}</h1>
+            <center> <img src="{{ asset('image/'~bp.imageName) }}" width="400" height="400" center ></center>
+
+            <h4>Nombre des coupons :</h4>
+            <div class="form-group">
+                {{ form_widget(form.nbrCoupon) }}
+            </div>
+            <h4>Start Date :</h4>
+            <div class="form-group">
+                {{ form_widget(form.startdate) }}
+            </div>
+
+
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+</div>
+
+
+{% endblock %}
+
+
+

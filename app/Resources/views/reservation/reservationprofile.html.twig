@@ -1,0 +1,25 @@
+{% extends "@BonPlan/Default/index.html.twig" %}
+
+{% block first %}
+    <h1>{{ reservation.idBonPlan }}</h1>
+
+    <table>
+        <tbody>
+
+
+
+
+
+
+        <tr>
+            <td>Vous avez reservée <i style="color: #df8a13">{{ reservation.nbrCoupon }}</i> coupon(s) pour la date de <i style="color: #df8a13">{{ reservation.startdate| date }}</i> </td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <ul>
+
+    </ul>
+{% endblock %}

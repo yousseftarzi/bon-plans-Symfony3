@@ -1,0 +1,570 @@
+{% extends 'BonPlanBundle:Default:index.html.twig' %}
+{% block slider1 %}
+
+<div class="container-fluid no-padding photobanner" xmlns="http://www.w3.org/1999/html">
+    <div id="home-slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+
+            <div class="item active">
+
+                <img src="{{ asset('bundles/espritparc/images/photoslider1.jpg')}}" style="height: 300px;width: 100%" alt="slide1" />
+
+            </div>
+            <div class="item">
+
+                <img src="{{ asset('bundles/espritparc/images/photoslider1.jpg')}}" alt="slide1" style="height: 300px;width: 100%" />
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block slider2 %}
+{% endblock %}
+{% block css %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="pizza, delivery food, fast food, sushi, take away, chinese, italian food">
+    <meta name="description" content="">
+    <meta name="author" content="Ansonika">
+    <title>QuickFood - Quality delivery or take away food</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('bundles/espritparc/images/favicon.ico')}}" />
+    <!-- For iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('bundles/espritparc/images/apple-touch-icon-114x114-precomposed.png')}}">
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('bundles/espritparc/images/apple-touch-icon-72x72-precomposed.png')}}">
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('bundles/espritparc/images/apple-touch-icon-57x57-precomposed.png')}}">
+    <!-- Library - Bootstrap v3.3.5 -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/libraries/lib.css')}}">
+    <!-- StrockGap Icon Fonts -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/libraries/strokegapicon/stroke-gap-icon.css')}}">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,500,600' rel='stylesheet' type='text/css'>
+
+    <!-- Custom - Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/style.css')}}">
+
+    <!--[if lt IE 9]>
+        <script src="{{ asset('bundles/espritparc/js/html5/respond.min.js')}}"></script>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="{{ asset('BonPlanDetailsCss/img/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-57x57-precomposed.png') }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-72x72-precomposed.png') }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-114x114-precomposed.png') }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-144x144-precomposed.png') }}">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+
+    <!-- BASE CSS -->
+    <link href="{{ asset('BonPlanDetailsCss/css/base.css') }}" rel="stylesheet">
+
+    <!-- SPECIFIC CSS -->
+    <link href="{{ asset('BonPlanDetailsCss/css/skins/square/grey.css') }}" rel="stylesheet">
+    <link href="{{ asset('BonPlanDetailsCss/css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('BonPlanDetailsCss/css/bootstrap3-wysihtml5.min.css') }}" rel="stylesheet">
+    <link src="{{ asset('BonPlanDetailsCss/css/dropzone.css') }}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+
+    <script src="{{ asset('BonPlanDetailsCss/js/html5shiv.min.js') }}" ></script>
+    <script src="{{ asset('BonPlanDetailsCss/js/respond.min.js') }}"></script>
+    <![endif]-->
+
+</head>
+{% endblock %}
+
+{% block first %}
+<!--[if lte IE 8]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+<![endif]-->
+
+
+<!-- End Preload -->
+
+<!-- Header ================================================== -->
+<header>
+
+</header>
+<!-- End Header =============================================== -->
+
+
+
+<!-- Content ================================================== -->
+<div class="container margin_60">
+    <div id="tabs" class="tabs">
+        <nav>
+            <ul>
+                <li><a href="#section-1" class="icon-profile"><span>Main info</span></a>
+                </li>
+                <li><a href="#section-2" class="icon-menut-items"><span>Ajouter Bon Plan</span></a>
+                </li>
+                <li><a href="#section-4" class="icon-settings"><span>Confidentialite</span></a>
+                </li>
+                <li><a href="#section-3" class="icon-settings"><span>Mes Bons Plans</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+
+            <section id="section-1" >
+                <div class="indent_title_in">
+                    <i class="icon_house_alt"></i>
+                    <h3>General restaurant description
+                    </h3>
+                    <p>Partem diceret praesent mel et, vis facilis alienum antiopam ea, vim in sumo diam sonet. Illud ignota cum te, decore elaboraret nec ea. Quo ei graeci repudiare definitionem. Vim et malorum ornatus assentior, exerci elaboraret eum ut, diam meliore no mel.</p>
+                </div>
+
+                <div class="wrapper_indent">
+                    <div class="form-group">
+                        <label>Restaurant name</label>
+                        <input class="form-control" name="restaurant_name" id="restaurant_name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Restaurant description</label>
+                        <textarea class="wysihtml5 form-control" placeholder="Enter text ..." style="height: 200px;"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Telephone</label>
+                                <input type="text" id="Telephone" name="Telephone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="Email" name="Email" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End wrapper_indent -->
+
+                <hr class="styled_2">
+
+                <div class="indent_title_in">
+                    <i class="icon_pin_alt"></i>
+                    <h3>Address</h3>
+                    <p>
+                        Mussum ipsum cacilds, vidis litro abertis.
+                    </p>
+                </div>
+                <div class="wrapper_indent">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Country</label>
+                                <select class="form-control" name="country" id="country">
+                                    <option value="" selected>Select your country</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="United states">United states</option>
+                                    <option value="Asia">Asia</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Street line 1</label>
+                                <input type="text" id="street_1" name="street_1" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Street line 2</label>
+                                <input type="text" id="street_2" name="street_2" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" id="city_booking" name="city_booking" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>State</label>
+                                <input type="text" id="state_booking" name="state_booking" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Postal code</label>
+                                <input type="text" id="postal_code" name="postal_code" class="form-control">
+                            </div>
+                        </div>
+                    </div><!--End row -->
+                </div><!-- End wrapper_indent -->
+
+                <hr class="styled_2">
+                <div class="indent_title_in">
+                    <i class="icon_images"></i>
+                    <h3>Logo and restaurant photos</h3>
+                    <p>
+                        Mussum ipsum cacilds, vidis litro abertis.
+                    </p>
+                </div>
+
+                <div class="wrapper_indent add_bottom_45">
+                    <div class="form-group">
+                        <label>Upload your restaurant logo</label>
+                        <div id="logo_picture" class="dropzone">
+                            <input name="file" type="file">
+                            <div class="dz-default dz-message"><span>Click or Drop Images Here</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload your restaurant photos</label>
+                        <div id="photos" class="dropzone">
+                            <input name="file" type="file" multiple>
+                            <div class="dz-default dz-message"><span>Click or Drop Images Here</span>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End wrapper_indent -->
+
+                <hr class="styled_2">
+                <div class="wrapper_indent">
+                    <button class="btn_1">Save now</button>
+                </div><!-- End wrapper_indent -->
+
+            </section><!-- End section 1 -->
+
+            <section id="section-2">
+                {{ form_start(form, {'method': 'post', 'action': path('profile')}) }}
+
+                <form method="post" action="{{ path('profile') }}">
+                <div class="indent_title_in">
+                    <i class="icon_document_alt"></i>
+                    <h3>insert Bon Plan</h3>
+                </div>
+
+                <div class="wrapper_indent">
+
+
+                    <div class="strip_menu_items">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="menu-item-pic dropzone">
+                                    {{ form_widget(form.file) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Title</label>
+                                            {{ form(form) }}
+                                            {{ form_widget(form.titre,{'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            {{ ivory_google_api([map]) }}
+                                            {{ ivory_google_map_js(map) }}
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Short description</label>
+                                    {{ form_widget(form.description,{'attr': {'class': 'form-control'}})}}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_errors(form.captcha) }}
+                                {{ form_widget(form.captcha) }}
+                                </div>
+                                {{ form_widget(form.valider) }}
+
+                            </div>
+                        </div><!-- End row -->
+                    </div><!-- End strip_menu_items -->
+
+
+
+
+
+                <div class="wrapper_indent">
+                    <div class="add_more_cat"><input type="submit" value="Ajouter" /><a href="{{ path('gregwar_captcha.generate_captcha',{"key":2 }) }}" class="btn_1">Add menu category</a> </div>
+                </div><!-- End wrapper_indent -->
+                </form>
+
+            </section><!-- End section 2 -->
+
+            <section id="section-3">
+
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 add_bottom_15">
+                        <div class="indent_title_in">
+                            <i class="icon_lock_alt"></i>
+                            <h3>Change your password</h3>
+                            <p>
+                                Mussum ipsum cacilds, vidis litro abertis.
+                            </p>
+                        </div>
+                        <div class="wrapper_indent">
+                            <div class="form-group">
+                                <label>Old password</label>
+                                <input class="form-control" name="old_password" id="old_password" type="password">
+                            </div>
+                            <div class="form-group">
+                                <label>New password</label>
+                                <input class="form-control" name="new_password" id="new_password" type="password">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm new password</label>
+                                <input class="form-control" name="confirm_new_password" id="confirm_new_password" type="password">
+                            </div>
+                            <button type="submit" class="btn_1 green">Update Password</button>
+                        </div><!-- End wrapper_indent -->
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 add_bottom_15">
+                        <div class="indent_title_in">
+                            <i class="icon_mail_alt"></i>
+                            <h3>Change your email</h3>
+                            <p>
+                                Mussum ipsum cacilds, vidis litro abertis.
+                            </p>
+                        </div>
+                        <div class="wrapper_indent">
+                            <div class="form-group">
+                                <label>Old email</label>
+                                <input class="form-control" name="old_email" id="old_email" type="email">
+                            </div>
+                            <div class="form-group">
+                                <label>New email</label>
+                                <input class="form-control" name="new_email" id="new_email" type="email">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm new email</label>
+                                <input class="form-control" name="confirm_new_email" id="confirm_new_email" type="email">
+                            </div>
+                            <button type="submit" class="btn_1 green">Update Email</button>
+                        </div><!-- End wrapper_indent -->
+                    </div>
+
+                </div><!-- End row -->
+
+                <hr class="styled_2">
+
+
+
+            </section><!-- End section 3 -->
+
+
+            <section id="section-4">
+
+<p>hallo {{ id }}</p>
+                <div class="row">
+                    <!-- Bon Plan -->
+                    {% for l in MesBonPlans %}
+                        <div class="col-md-4 col-sm-6 col-xs-6">
+                            <div class="dealbox">
+                                <div class="deal-thmbimg">
+                                    <img src="../../../../img/{{ l.imageName }}" width="370" height="247" alt="deal1">
+                                    <!-- change effacer 15%-->
+                                </div>
+                                <div class="deal-content">
+                                    <h3>{{ l.titre }}</h3>
+                                    <p>{{ l.description }}</p>
+                                    <p>Auteur {{ l.loginAuteur }}</p>
+
+                                    <a href="{{ path('singleBonPlan',{"id":l.id}) }}">Plus de details</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <style>
+                        .bouton5 {
+                            border-radius:12px 0 12px 0;
+                            background: #d34836;
+                            border:none;
+                            color:#fff;
+                            font:bold 12px Verdana;
+                            padding:20px 20px 20px 20px;
+                            margin-top: 10px;
+                            margin-left: 5px;
+
+                        }
+                        .bouton6 {
+                            border-radius:12px 0 12px 0;
+                            background: #478bf9;
+                            border:none;
+                            color:#fff;
+                            font:bold 12px Verdana;
+                            padding:20px 20px 20px 20px;
+                            margin-top: 10px;
+                            margin-right: 5px;
+                        }
+                    </style>
+                    <button class="bouton5" type="submit" title="Submit" value="Faire une reclamation" name="submit">
+                        <a href="{{ path('add_rec')}}">Faire une reclamation</a></button>
+
+                    <button class="bouton6" type="submit" title="Submit" value="Mes Recommandations" name="submit">
+                        <a href="{{ path('recommandation')}}">Mes Recommandations</a></button>
+
+                    <button class="bouton6" type="submit" title="Submit" value="Mes Evaluations" name="submit">
+                        <a href="{{ path('mes_evaluations')}}">Mes Evaluations</a></button>
+
+
+                </div><!--row-->
+
+                <hr class="styled_2">
+
+
+
+            </section><!-- End section 4 -->
+        </div><!-- End content -->
+    </div>
+</div><!-- End container  -->
+<!-- End Content =============================================== -->
+
+<!-- Footer ================================================== -->
+
+
+<!-- End Footer =============================================== -->
+
+<div class="layer"></div>
+<!-- Mobile menu overlay mask -->
+
+<!-- Login modal -->
+<div class="modal fade" id="login_2" tabindex="-1" role="dialog" aria-labelledby="myLogin" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-popup">
+            <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+            <form action="#" class="popup-form" id="myLogin">
+                <div class="login_icon"><i class="icon_lock_alt"></i>
+                </div>
+                <input type="text" class="form-control form-white" placeholder="Username">
+                <input type="text" class="form-control form-white" placeholder="Password">
+                <div class="text-left">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End modal -->
+
+<!-- Register modal -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myRegister" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-popup">
+            <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+            <form action="#" class="popup-form" id="myRegister">
+                <div class="login_icon"><i class="icon_lock_alt"></i>
+                </div>
+                <input type="text" class="form-control form-white" placeholder="Name">
+                <input type="text" class="form-control form-white" placeholder="Last Name">
+                <input type="email" class="form-control form-white" placeholder="Email">
+                <input type="text" class="form-control form-white" placeholder="Password" id="password1">
+                <input type="text" class="form-control form-white" placeholder="Confirm password" id="password2">
+                <div id="pass-info" class="clearfix"></div>
+                <div class="checkbox-holder text-left">
+                    <div class="checkbox">
+                        <input type="checkbox" value="accept_2" id="check_2" name="check_2" />
+                        <label for="check_2"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-submit">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End Register modal -->
+
+
+
+<!-- COMMON SCRIPTS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/common_scripts_min.js"></script>
+<script src="js/functions.js"></script>
+<script src="assets/validate.js"></script>
+
+<!-- Specific scripts -->
+<script src="{{ asset('BonPlanDetailsCss/js/tabs.js') }}"></script>
+<script>
+    new CBPFWTabs(document.getElementById('tabs'));
+</script>
+
+<script src="{{ asset('BonPlanDetailsCss/js/bootstrap3-wysihtml5.min.js') }}'"></script>
+<script type="text/javascript">
+    $('.wysihtml5').wysihtml5({});
+</script>
+<script src="{{ asset('BonPlanDetailsCss/js/dropzone.min.js') }}"></script>
+<script>
+    if ($('.dropzone').length > 0) {
+        Dropzone.autoDiscover = false;
+        $("#photos").dropzone({
+            url: "upload",
+            addRemoveLinks: true
+        });
+
+        $("#logo_picture").dropzone({
+            url: "upload",
+            maxFiles: 1,
+            addRemoveLinks: true
+        });
+
+        $(".menu-item-pic").dropzone({
+            url: "upload",
+            maxFiles: 1,
+            addRemoveLinks: true
+        });
+    }
+</script>
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+                center: {lat: -33.866, lng: 151.196},
+                zoom: 15
+            });
+
+            var infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+
+            service.getDetails({
+                placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
+            }, function(place, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: place.geometry.location
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                            'Place ID: ' + place.place_id + '<br>' +
+                            place.formatted_address + '</div>');
+                        infowindow.open(map, this);
+                    });
+                }
+            });
+        }
+    </script>
+{% endblock %}

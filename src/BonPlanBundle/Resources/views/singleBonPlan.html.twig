@@ -1,0 +1,377 @@
+{% extends 'BonPlanBundle:Default:index.html.twig' %}
+{% block slider1 %}
+
+    <div class="container-fluid no-padding photobanner" xmlns="http://www.w3.org/1999/html">
+        <div id="home-slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+
+                    <img src="{{ asset('bundles/espritparc/images/photoslider1.jpg')}}" style="height: 300px;width: 100%" alt="slide1" />
+
+                </div>
+                <div class="item">
+
+                    <img src="{{ asset('bundles/espritparc/images/photoslider1.jpg')}}" alt="slide1" style="height: 300px;width: 100%" />
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block slider2 %}
+{% endblock %}
+{% block css %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="pizza, delivery food, fast food, sushi, take away, chinese, italian food">
+        <meta name="description" content="">
+        <meta name="author" content="Ansonika">
+        <title>QuickFood - Quality delivery or take away food</title>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/espritparc/images/favicon.ico')}}" />
+        <!-- For iPhone 4 Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('bundles/espritparc/images/apple-touch-icon-114x114-precomposed.png')}}">
+        <!-- For iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('bundles/espritparc/images/apple-touch-icon-72x72-precomposed.png')}}">
+        <!-- For iPhone: -->
+        <link rel="apple-touch-icon-precomposed" href="{{ asset('bundles/espritparc/images/apple-touch-icon-57x57-precomposed.png')}}">
+        <!-- Library - Bootstrap v3.3.5 -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/libraries/lib.css')}}">
+        <!-- StrockGap Icon Fonts -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/libraries/strokegapicon/stroke-gap-icon.css')}}">
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Hind:400,500,600' rel='stylesheet' type='text/css'>
+
+        <!-- Custom - Theme CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/espritparc/style.css')}}">
+
+        <!--[if lt IE 9]>
+        <script src="{{ asset('bundles/espritparc/js/html5/respond.min.js')}}"></script>
+
+    <!-- Favicons-->
+        <link rel="shortcut icon" href="{{ asset('BonPlanDetailsCss/img/favicon.ico') }}" type="image/x-icon">
+        <link rel="apple-touch-icon" type="image/x-icon" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-57x57-precomposed.png') }}">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-72x72-precomposed.png') }}">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-114x114-precomposed.png') }}">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ asset('BonPlanDetailsCss/img/apple-touch-icon-144x144-precomposed.png') }}">
+
+        <!-- GOOGLE WEB FONT -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,300,300italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+
+        <!-- BASE CSS -->
+        <link href="{{ asset('BonPlanDetailsCss/css/base.css') }}" rel="stylesheet">
+
+        <!-- SPECIFIC CSS -->
+        <link href="{{ asset('BonPlanDetailsCss/css/skins/square/grey.css') }}" rel="stylesheet">
+        <link href="{{ asset('BonPlanDetailsCss/css/admin.css') }}" rel="stylesheet">
+        <link href="{{ asset('BonPlanDetailsCss/css/bootstrap3-wysihtml5.min.css') }}" rel="stylesheet">
+        <link src="{{ asset('BonPlanDetailsCss/css/dropzone.css') }}" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+
+        <script src="{{ asset('BonPlanDetailsCss/js/html5shiv.min.js') }}" ></script>
+        <script src="{{ asset('BonPlanDetailsCss/js/respond.min.js') }}"></script>
+        <![endif]-->
+
+    </head>
+{% endblock %}
+
+{% block first %}
+    <!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+    <![endif]-->
+
+
+    <!-- End Preload -->
+
+    <!-- Header ================================================== -->
+    <header>
+
+    </header>
+    <!-- End Header =============================================== -->
+
+
+
+
+    <div class="container blog blogpost">
+
+    </div>
+    <div class="container blog blogpost">
+        <div class="section-padding"></div>
+        <div class="row">
+            <div class="col-md-9 col-sm-8 content-area">
+
+                <div class="entry-cover">
+                    <img src="../../../../img/{{ BonPlan.imageName }}" alt="blogpost" width="820" height="410"/>
+                </div>
+                <div class="entrycontent-block">
+                    <div class="entry-meta">
+                        <div class="post-date">{{ BonPlan.dateCreation|date }}</div>
+                    </div>
+                    <h3 class="entry-title">{{ BonPlan.titre }}</h3>
+                    <div class="entry-content">
+                        <p> {{ BonPlan.description }}.</p>
+                    </div>
+                    <div class="entrymeta-block">
+                        <div class="post-by">
+                            <a href="#" title="Stevan Smith"><span class="icon icon-User"></span> Stevan Smith</a>
+                        </div>
+                        <div class="post-like">
+                            <a href="#" title="10 Like"><span class="icon icon-Heart"></span> 10 Likes</a>
+                        </div>
+                        <div class="post-comment">
+                            <a href="#" title="20 Comments"><span class="icon icon-Message"></span> 20 Comments</a>
+                        </div>
+                        <div class="post-share">
+                            <span class="icon icon-Share"></span>Share It
+                            <ul>
+                                <li class="share-fb"><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="share-gp"><a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li class="share-twt"><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="share-drb"><a href="#" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .bouton5 {
+                        border-radius:12px 0 12px 0;
+                        background: #d34836;
+                        border:none;
+                        color:#fff;
+                        font:bold 12px Verdana;
+                        padding:20px 20px 20px 20px;
+                        margin-top: 10px;
+                        margin-left: 5px;
+
+                    }
+                    .bouton6 {
+                        border-radius:12px 0 12px 0;
+                        background: #478bf9;
+                        border:none;
+                        color:#fff;
+                        font:bold 12px Verdana;
+                        padding:20px 20px 20px 20px;
+                        margin-top: 10px;
+                        margin-right: 5px;
+                    }
+                </style>
+                <button class="bouton5" type="submit" title="Submit" value="Supprimer" name="submit">
+                    <a href="{{ path('supprimerBonplan',{"id":BonPlan.id}) }}">Supprimer</a></button>
+
+                <button class="bouton6" type="submit" title="Submit" value="Supprimer" name="submit">
+                    <a href="{{ path('modifierBonplan',{"id":BonPlan.id}) }}">Modifier</a></button>
+                <!-- rate -->
+                <img id="{{ BonPlan.id }}h" src="{{ asset('smiley/h2.png') }}">
+                <img id="{{ BonPlan.id }}n" src="{{ asset('smiley/n2.png') }}">
+                <img id="{{ BonPlan.id }}s" src="{{ asset('smiley/s2.png') }}">
+
+                    <div class="comment-section">
+
+                </div>
+                <div class="comment-form">
+                    <h3>Leave a Comment</h3>
+                    {% for flashMessage in app.session.flashbag.get('notice') %}
+
+                        <div class="alert alert-danger">
+                            {{ flashMessage }}
+                        </div>
+
+                    {% endfor %}
+                    <div class="container blog blogpost">
+                        <div class="section-padding"></div>
+                        <div class="row">
+                            <div class="col-md-9 col-sm-8 content-area">
+                                <div class="comment-section">
+                                    <h3 class="section-heading">Comments</h3>
+                                        <ul class="media-list">
+                                        {% for commentaire in comments %}
+
+                                            <li class="media">
+                                                <div class="media-left">
+                                                    <a href="#" title="{{ commentaire.idAuteur.username }}"><img src="images/comment1.jpg" alt="comment" width="86" height="86"></a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="media-content">
+                                                        <h4 class="media-heading">{{ commentaire.idAuteur.username }}<span>{{ commentaire.dateCreation|date('d-m-Y::h:i') }}</span></h4>
+                                                        <p>{{ commentaire.contenu }}</p>
+                                                        {% if commentaire.idAuteur==currentUser %}
+                                                            <a href="{{ path('modifier_commentaire',{'id': commentaire.id, 'idBonPlan' : BonPlan.id }) }}" title="Reply"><i class="fa fa-reply" aria-hidden="true"></i>Modifier</a>
+                                                            &nbsp; &nbsp;
+                                                            <a href="{{ path('supprimer_commentaire',{'id': commentaire.id, 'idBonPlan' : BonPlan.id }) }}" title="Reply"><i class="fa fa-reply" aria-hidden="true"></i>Supprimer</a>
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                    {{ form_start(form) }}
+                                    {{ form_end(form) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 widget-area">
+
+                <aside class="widget widget-catagories">
+                    <h3 class="widget-title">Post Categories</h3>
+                    <ul>
+                        {% for l in topBonPlan %}
+
+                            <li><a href="#" title="">{{ l.0.idBonPlan.titre }}<span>{{ l.x }}</span></a></li>
+                        {% endfor %}
+
+
+
+                    </ul>
+                </aside>
+                <aside class="widget widget-latestposts">
+
+                </aside>
+                <aside class="widget widget-catagories widget-archives">
+
+
+
+
+                </aside>
+                <aside class="widget widget-tag">
+
+                </aside>
+            </div>
+        </div>
+        <div class="section-padding"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- COMMON SCRIPTS -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/common_scripts_min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="assets/validate.js"></script>
+
+    <!-- Specific scripts -->
+    <script src="{{ asset('BonPlanDetailsCss/js/tabs.js') }}"></script>
+    <script>
+        new CBPFWTabs(document.getElementById('tabs'));
+    </script>
+
+    <script src="{{ asset('BonPlanDetailsCss/js/bootstrap3-wysihtml5.min.js') }}'"></script>
+    <script type="text/javascript">
+        $('.wysihtml5').wysihtml5({});
+    </script>
+    <script src="{{ asset('BonPlanDetailsCss/js/dropzone.min.js') }}"></script>
+    <script>
+        if ($('.dropzone').length > 0) {
+            Dropzone.autoDiscover = false;
+            $("#photos").dropzone({
+                url: "upload",
+                addRemoveLinks: true
+            });
+
+            $("#logo_picture").dropzone({
+                url: "upload",
+                maxFiles: 1,
+                addRemoveLinks: true
+            });
+
+            $(".menu-item-pic").dropzone({
+                url: "upload",
+                maxFiles: 1,
+                addRemoveLinks: true
+            });
+        }
+    </script>
+    <script src="{{ asset('bundles/espritparc/js/jquery.min.js')}}"></script>
+
+    <script>
+        $('#{{ BonPlan.id }}h').on({
+            'click': function(){
+                $('#{{ BonPlan.id }}h').attr('src','{{ asset('smiley/h1.png') }}');
+                $('#{{ BonPlan.id }}n').attr('src','{{ asset('smiley/n2.png') }}');
+                $('#{{ BonPlan.id }}s').attr('src','{{ asset('smiley/s2.png') }}');
+
+                $.ajax({
+                    url:'{{ (path('rate')) }}',
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        "some_var_name": "3",
+                        "id": {{ BonPlan.id }}
+                    },
+                    async: true,
+                    success: function (data)
+                    {
+
+
+                    }
+                });
+            }
+        });
+        $('#{{ BonPlan.id }}n').on({
+            'click': function(){
+                $('#{{ BonPlan.id }}h').attr('src','{{ asset('smiley/h2.png') }}');
+                $('#{{ BonPlan.id }}n').attr('src','{{ asset('smiley/n1.png') }}');
+                $('#{{ BonPlan.id }}s').attr('src','{{ asset('smiley/s2.png') }}');
+
+                $.ajax({
+                    url:'{{ (path('rate')) }}',
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        "some_var_name": "2",
+                        "id": {{ BonPlan.id }}
+
+                    },
+                    async: true,
+                    success: function (data)
+                    {
+
+
+                    }
+                });
+            }
+        });
+        $('#{{ BonPlan.id }}s').on({
+            'click': function(){
+                $('#{{ BonPlan.id }}h').attr('src','{{ asset('smiley/h2.png') }}');
+                $('#{{ BonPlan.id }}n').attr('src','{{ asset('smiley/n2.png') }}');
+                $('#{{ BonPlan.id }}s').attr('src','{{ asset('smiley/s1.png') }}');
+                $.ajax({
+                    url:'{{ (path('rate')) }}',
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        "some_var_name": "0",
+                        "id": {{ BonPlan.id }},
+                    },
+                    async: true,
+                    success: function (data)
+                    {
+
+
+                    }
+                });
+            }
+        });
+
+
+
+    </script>
+{% endblock %}

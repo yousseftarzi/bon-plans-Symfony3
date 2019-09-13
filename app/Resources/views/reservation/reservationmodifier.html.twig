@@ -1,0 +1,19 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+{% block first %}   <div id="deal-section" class="container deal-section">
+    <div class="section-padding"></div>
+    <div class="section-header">
+
+
+        <h1 align="center" class="black"> le Bon Plan a reservé est</h1> <h1 align="center" style="color:red;">{{ reservations.idBonPlan }}</h1>
+        <center> <img src="{{ asset('image/'~bp.imageName) }}" width="400" height="400" center ></center>
+        {{ form_start(form) }}
+
+
+        {{ form_widget(form) }}
+
+
+        {{ form_end(form) }}
+    </div>
+
+
+{% endblock %}

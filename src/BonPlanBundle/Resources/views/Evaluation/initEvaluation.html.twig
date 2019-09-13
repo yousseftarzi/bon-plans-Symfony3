@@ -1,0 +1,45 @@
+{% extends "BonPlanBundle:Default:Base.html.twig" %}
+{% block first %} <h1> Evaluer </h1>
+<form method="post" name="form" action="{{ path('ajouter_evaluation',{'idPro':idPro,'idCategorie':idCategorie}) }}">
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110">
+                    <div class="table100-head">
+                        <table >
+                            <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column1">Nom</th>
+                                <th class="cell100 column1">Action</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table100-body js-pscroll">
+                        <table >
+                            <tbody>
+                            {% for critere in criteres %}
+                                <tr>
+                                    <td>{{ critere.nom }}</td>
+                                    <td><input type="number" width="500" size="5" value="1" min="1" max="5" name={{ critere.id }} />  </td>
+                                </tr>
+                            {% endfor %}
+
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <input type="submit" value="submit"/>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</form>
+{% endblock %}
+
+
+

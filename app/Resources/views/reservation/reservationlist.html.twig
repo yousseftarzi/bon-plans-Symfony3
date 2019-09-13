@@ -1,0 +1,40 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+{% block second %}   <div id="deal-section" class="container deal-section">
+    <div class="section-padding"></div>
+    <div class="section-header">
+        <h1>Liste des réservations</h1>
+        <table border="4" cellpadding="10" cellspacing="1" width="100%">
+            <tr>
+                <td width="20%" align="center"><i>Titre de Bon plan</i></td>
+                <td width="20%" align="center"><i>Nombre de coupon</i></td>
+                <td width="20%" align="center"><i>Date Reservation</i></td>
+                <td width="20%" align="center"><i>Modifier</i></td>
+
+
+            </tr>
+
+
+        {% for reservation in reservations %}
+
+                <tr>
+                 <td width="20%" align="center">  {{ reservation.idBonPlan }} </td>
+                 <td width="20%" align="center">  {{ reservation.nbrCoupon}} </td>
+                 <td width="20%" align="center">  {{ reservation.startdate| date }} </td>
+
+                    <td width="20%" align="center"> <a href="{{ path('modif',{'id':reservation.id}) }}" title ="Get this deal" class="getdeal-btn">
+                        Modifier
+                    </a></td>
+                 <td width="20%" align="center"> <a href="{{ path('delete_reservation',{'id':reservation.id}) }}" title ="Get this deal" class="getdeal-btn">
+                            Supp
+                     </a></td>
+                    <td width="20%" align="center"> <a href="{{ path('afficher_res_prof',{'id':reservation.id}) }}" title ="Get this deal" class="getdeal-btn">
+                            afficher
+                        </a></td>
+               </tr>
+
+        {% endfor %}
+        </table>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "BonPlanBundle:Default:base.html.twig" %}
+{% block first %}
+
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver2 m-b-110">
+                    <div class="table100-head">
+                        <table>
+                            <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column1">#</th>
+                                <th class="cell100 column2">Points</th>
+                                <th class="cell100 column3">Username</th>
+                                <th class="cell100 column4">Name</th>
+                                <th class="cell100 column5">Last Login </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="table100-body js-pscroll">
+                        <table>
+                            <tbody>
+                            {% set i=0 %}
+                            {% for user in u  %}
+                            {% if id is defined %}
+                                {% if id==u[i].id %}
+
+                                    <tr class="getuser">
+                                        <td class="cell100 column1">{{ i+1 }}</td>
+                                        <td class="cell100 column2">{{ u[i].nbPoints}}</td>
+                                        <td class="cell100 column3">{{ u[i].username }}</td>
+                                        <td class="cell100 column4">{{ u[i].prenom }}</td>
+                                        <td class="cell100 column5">{{ u[i].lastlogin | date }}</td>
+                                    </tr>
+                                    {% set i=i+1 %}
+                                    {% else %}
+                            <tr class="row100 body">
+                                <td class="cell100 column1">{{ i+1 }}</td>
+                                <td class="cell100 column2">{{ u[i].nbPoints}}</td>
+                                <td class="cell100 column3">{{ u[i].username }}</td>
+                                <td class="cell100 column4">{{ u[i].prenom }}</td>
+                                <td class="cell100 column5">{{ u[i].lastlogin | date }}</td>
+                            </tr>
+                                {% set i=i+1 %}
+                            {% endif %}
+                            {% else %}
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">{{ i+1 }}</td>
+                                    <td class="cell100 column2">{{ u[i].nbPoints}}</td>
+                                    <td class="cell100 column3">{{ u[i].username }}</td>
+                                    <td class="cell100 column4">{{ u[i].prenom}}</td>
+                                    <td class="cell100 column5">{{ u[i].lastlogin | date }}</td>
+                                </tr>
+                            {% set i=i+1 %}
+                            {% endif %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

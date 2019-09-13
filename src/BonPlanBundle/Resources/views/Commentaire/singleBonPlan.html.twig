@@ -1,0 +1,45 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+{% block first %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+
+        <div class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+
+    {% endfor %}
+<div class="container blog blogpost">
+    <div class="section-padding"></div>
+    <div class="row">
+        <div class="col-md-9 col-sm-8 content-area">
+    <div class="comment-section">
+        <h3 class="section-heading">Comments</h3>
+{% for commentaire in comments %}
+
+
+    <ul class="media-list">
+            <div class="media-left">
+                <a href="#" title="{{ commentaire.idAuteur.username }}"><img src="images/comment2.jpg"  width="86" height="86"/></a>
+            </div>
+            <div class="media-body">
+                <div class="media-content">
+                    <h4 class="media-heading">{{ commentaire.idAuteur.username }}<span>{{ commentaire.dateCreation|date('d-m-Y::h:i') }}</span></h4>
+                    <p>{{ commentaire.contenu }}</p>
+                    {% if commentaire.idAuteur==currentUser %}
+                    <a href="{{ path('modifier_commentaire',{'id': commentaire.id }) }}" title="Reply"><i class="fa fa-reply" aria-hidden="true"></i>Modifier</a>
+                    <a href="{{ path('supprimer_commentaire',{'id': commentaire.id }) }}" title="Reply"><i class="fa fa-reply" aria-hidden="true"></i>Supprimer</a>
+                    {% endif %}
+                </div>
+            </div>
+    </ul>
+{% endfor %}
+        {{ form_start(form) }}
+        {{ form_end(form) }}
+    </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+        {% endblock %}
+
+

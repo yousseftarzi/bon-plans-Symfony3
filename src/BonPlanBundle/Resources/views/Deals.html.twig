@@ -1,0 +1,30 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+{% block first %}        <div class="row" style="margin-top: 50px;margin-right: 50px;margin-left: 50px">
+    <!-- Bon Plan -->
+    {% for l in BonPlans %}
+        <div class="col-md-4 col-sm-6 col-xs-6">
+            <div class="dealbox">
+                <div class="deal-thmbimg">
+                    <img src="{{ asset('image/'~l.imageName)}}" width="370" height="247" alt="deal1"/>
+                    <!-- change effacer 15%-->
+                    <a href="{{ path('singleBonPlan',{"id":l.id}) }}">Plus de details</a>
+
+                </div>
+                <div class="deal-content">
+                    <h3>{{ l.titre }}</h3>
+                    <p>{{ l.description }}</p>
+                    <p>Auteur {{ l.loginAuteur }}</p>
+
+                    <a href="{{ path('add_reservation',{'id':l.id}) }}" title ="Get this deal" class="getdeal-btn">
+                        <span class="get-coupencode">12xjuox</span>
+                        <span class="getdeal">Reserver</span>
+                    </a>
+                    <div class="expire"><span>Date Creation :</span> {{ l.dateCreation|date }}</div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <div class="navigation" style="width: 500px">
+        {{ knp_pagination_render(BonPlans) }}
+    </div>
+</div><!--row{% endblock %}

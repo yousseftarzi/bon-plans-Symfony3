@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class=""><!--<![endif]-->
+
+<!-- Mirrored from premiumlayers.net/demo/html/geodeo/blogpost-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 13:18:25 GMT -->
+<head>
+	<meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Single Blog -Geo</title>
+	<!-- Standard Favicon -->
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />	
+	<!-- For iPhone 4 Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+	<!-- For iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
+	<!-- For iPhone: -->
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57-precomposed.png">
+	<!-- Library - Bootstrap v3.3.5 -->
+    <link rel="stylesheet" type="text/css" href="libraries/lib.css">
+   
+	<!-- StrockGap Icon Fonts -->
+	<link rel="stylesheet" type="text/css" href="libraries/strokegapicon/stroke-gap-icon.css">
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Hind:400,500,600' rel='stylesheet' type='text/css'>
+	
+	<!-- Custom - Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!--[if lt IE 9]>
+		<script src="js/html5/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+	<!-- LOADER -->
+	<div id="site-loader" class="load-complete">
+		<div class="loader">
+			<div class="loader-inner ball-triangle-path">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div><!-- Loader /- -->
+	
+	<!-- Header -->	
+	<header class="header-main container-fluid no-padding">
+		<div class="menu-block">
+			<div class="menu-left-bg"></div>
+			<div class="container">
+				<!-- Navigation -->
+				<nav class="navbar ow-navigation">
+					<div class="col-md-3 no-padding">
+						<div class="navbar-header">
+							<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a title="Logo" href="index.html" class="navbar-brand"><img src="images/logo.png" alt="logo" width="43" height="51"/><span>Geodeo</span></a>
+							<a href="index.html" class="mobile-logo" title="Logo"><h3>Geodeo</h3></a>
+						</div>
+					</div>
+					<div class="col-md-9 menuinner no-padding">
+						<div class="navbar-collapse collapse" id="navbar">
+							<ul class="nav navbar-nav menubar">
+								<li><a title="Home" href="index.html">Home</a></li>
+								<li><a title="Deals" href="index.html#deal-section">Deals</a></li>
+								<li><a title="Shops" href="index.html#shopingbrands">Shops</a></li>
+								<li><a title="Categories" href="category-page.html">Categories</a></li>
+								<li class="dropdown">
+									<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Pages" href="#">Pages</a>
+									<i class="ddl-switch fa fa-angle-down"></i>
+									<ul class="dropdown-menu">
+										<li><a title="Register" href="register-page.html">Register</a></li>
+										<li><a title="Categories" href="coupons-page.html">Coupons</a></li>
+										<li><a title="404" href="404-page.html">404</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a aria-expanded="false" aria-haspopup="true" role="button" class="dropdown-toggle" title="Latest News" href="blog-page.html">Latest News</a>
+									<i class="ddl-switch fa fa-angle-down"></i>
+									<ul class="dropdown-menu">
+										<li class="active"><a title="Blog Single" href="blogpost-page.html">Blog Single</a></li>
+									</ul>
+								</li>
+								<li><a title="Contact Us" href="contactus-page.html">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav><!-- Navigation /- -->
+				<div class="user-cart">
+					<a href="#" title="User"><i class="fa fa-user" aria-hidden="true"></i></a>
+					<a href="#" title="Your Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</header><!-- Header /- -->
+	<!-- PageBanner -->
+	<div class="container-fluid pagebanner blogpost no-padding">
+		<div class="container">
+			<div class="banner-content-block">
+				<div class="banner-content">
+					<h3>Post Single</h3>
+					<ol class="breadcrumb">
+						<li><a href="index.html" title="Home">Home</a></li>
+						<li class="active">Latest News</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div><!-- PageBanner /- -->	
+	<!-- Browse Category -->
+	<div class="container-fluid no-padding browsecategory">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 col-sm-8 col-xs-12">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for Deals">
+						<span class="input-group-btn">
+							<button class="btn" title="Search" type="button">Search</button>
+						</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-12">
+					<a href="#" title="Browse Categories"><i class="fa fa-bars" aria-hidden="true"></i> Browse Categories</a>
+				</div>
+			</div>
+		</div>
+	</div><!-- Browse Category /- -->
+	<!-- Blog -->
+	<div class="container blog blogpost">
+		<div class="section-padding"></div>
+		<div class="row">
+			<div class="col-md-9 col-sm-8 content-area">
+				<article class="type-post">
+					<div class="entry-cover">
+						<img src="images/blogpost.jpg" alt="blogpost" width="820" height="410"/>
+						<div class="entrycover-shape"></div>
+						<span class="icon icon-Picture"></span>
+					</div>
+					<div class="entrycontent-block">
+						<div class="entry-meta">
+							<div class="post-date">07 December 2015</div>
+						</div>
+						<h3 class="entry-title">All of them had hair of gold like their mother the youngest one</h3>
+						<div class="entry-content">
+							<p>And we know flipper lives in a world full of wonder flying there under under the sea the ship set ground on the shore of this uncharted desert isle with gilligan the skipper too the millionaire and his wife the ship set ground on the shore of this uncharted desert isle with gilligan the skipper too the millionaire and his wife. Well the first thing you know old jeds a millionaire kinfolk said jed move away from there come and dance on our floor take a step that is new we have a loveable space that needs your face threes company too the brady bunch the way we all became the flipper lives in a world full of wonder flying there under the sea.</p>
+							<p>Five passengers set sail that day for a three hour tour a three hour tour believe it or not I am walking on air I never thought I could feel so free just two good old boys would not change if they could fighting the system like a true modern day robin hood so lets make the most of this beautiful day since we are in the world.</p>
+							<div class="shopingbrands">
+								<div class="row">
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand2.jpg" alt="brand2" width="178" height="100"/>
+											<a href="#" title="Amazon" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand5.jpg" alt="brand5" width="178" height="100"/>
+											<a href="#" title="BestBuy" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand3.jpg" alt="brand3" width="178" height="100"/>
+											<a href="#" title="JcPenney" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand4.jpg" alt="brand4" width="178" height="100"/>
+											<a href="#" title="ebay" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand7.jpg" alt="brand7" width="178" height="100"/>
+											<a href="#" title="Puma" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand8.jpg" alt="brand8" width="178" height="100"/>
+											<a href="#" title="Esprit" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand9.jpg" alt="brand9" width="178" height="100"/>
+											<a href="#" title="Lacoste" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-3">
+										<div class="brandbox">
+											<img src="images/brand10.jpg" alt="brand10" width="178" height="100"/>
+											<a href="#" title="Mexx" class="brand-content"><span>Earn upto</span><span class="off-per">3.7%</span><span>cashback</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p>Just sit right back and you will hear a tale a tale of a fateful trip that started from this tropic port aboard this tiny ship in a freak mishap ranger and its pilot captain william buck rogers are blown out of their trajectory into an orbit which freezes his life support systems and returns buck rogers to earth five hundred years later.</p>
+							<div class="entry-thumbnail">
+								<img width="345" height="276" src="images/blogpost-thumb.jpg" alt="blogpost-thumb">
+								<p>Under the sea the ship set ground on the shore of this uncharted desert isle with gilligan the skipper too the millionaire and his wife the ship set ground on the shore of this uncharted desert isle with gilligan the skipper too the millionaire and his wife. Well the first thing you know old jeds a millionaire kinfolk said jed move away from there come and dance on our floor take a step that is new we have a loveable space that needs your face threes and company too the brady the most of this beautiful day.</p>
+							</div>
+							<p>That this group would somehow form a family that is the way we all became the brady bunch just sit right back and you will hear a tale a tale of a fateful trip that started from this tropic port aboard this tiny ship.</p>
+						</div>
+						<div class="entrymeta-block">
+							<div class="post-by">
+								<a href="#" title="Stevan Smith"><span class="icon icon-User"></span> Stevan Smith</a>
+							</div>
+							<div class="post-like">
+								<a href="#" title="10 Like"><span class="icon icon-Heart"></span> 10 Likes</a>
+							</div>
+							<div class="post-comment">
+								<a href="#" title="20 Comments"><span class="icon icon-Message"></span> 20 Comments</a>
+							</div>
+							<div class="post-share">
+								<span class="icon icon-Share"></span>Share It
+								<ul>
+									<li class="share-fb"><a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li class="share-gp"><a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+									<li class="share-twt"><a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li class="share-drb"><a href="#" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+				<div class="comment-section">
+					<h3 class="section-heading">Comments<span>(3)</span></h3>
+					<ul class="media-list">
+						<li class="media">
+							<div class="media-left">
+								<a href="#" title="Robert smith"><img src="images/comment1.jpg" alt="comment" width="86" height="86"/></a>
+							</div>
+							<div class="media-body">
+								<div class="media-content">
+									<h4 class="media-heading">Robert smith<span>08 Dec - 2015</span></h4>
+									<p>That this group would somehow form a family that's the way we all became the Brady Bunch. Just sit right back and you'll hear a tale a tale of a fateful trip that started from this tropic port.</p>
+									<a href="#" title="Reply"><i class="fa fa-reply" aria-hidden="true"></i>Reply</a>
+								</div>
+							</div>
+						</li>
+						<li class="media media-even">
+							<div class="media-left">
+								<a href="#" title="David Martin"><img src="images/comment2.jpg" alt="comment" width="86" height="86"/></a>
+							</div>
+							<div class="media-body">
+								<div class="media-content">
+									<h4 class="media-heading">David Martin<span>08 Dec - 2015</span></h4>
+									<p>Rogers are blown out of their trajectory into an orbit which freezes his life support systems and returns Buck Rogers to Earth to make the others comfortable in their island.</p>
+									<a href="#" title="Reply"><i class="fa fa-reply" aria-hidden="true"></i>Reply</a>
+								</div>
+							</div>
+						</li>
+						<li class="media">
+							<div class="media-left">
+								<a href="#" title="Robert smith"><img src="images/comment3.jpg" alt="comment" width="86" height="86"/></a>
+							</div>
+							<div class="media-body">
+								<div class="media-content">
+									<h4 class="media-heading">Robert smith<span>12 Jan - 2016</span></h4>
+									<p>Friendly neighbors there that's where we meet. Can you tell me how to get how to get to Sesame Street. Goodbye gray sky hello blue. There's nothing can hold me when I hold you.</p>
+									<a href="#" title="Reply"><i class="fa fa-reply" aria-hidden="true"></i>Reply</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="comment-form">
+					<h3>Leave a Comment</h3>
+					<form class="row">
+						<div class="form-group col-md-6">
+							<input type="text" required="" placeholder="Your Name *" class="form-control">
+						</div>
+						<div class="form-group col-md-6">
+							<input type="text" required="" placeholder="Email address *" class="form-control">
+						</div>
+						<div class="form-group col-md-12">
+							<textarea placeholder="Your Comment *" rows="8" class="form-control"></textarea>
+						</div>
+						<div class="form-group col-md-12">
+							<input type="submit" title="Submit" value="Post comments" name="submit">
+						</div>	
+					</form>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 widget-area">
+				<aside class="widget widget-search">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search . . .">
+						<span class="input-group-btn">
+							<button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</aside>
+				<aside class="widget widget-catagories">
+					<h3 class="widget-title">Post Categories</h3>
+					<ul>
+						<li><a href="#" title="Food & Restaurant">Food & Restaurant<span>09</span></a></li>
+						<li><a href="#" title="Business Circle">Business Circle<span>10</span></a></li>
+						<li><a href="#" title="Shopping Directory">Shopping Directory<span>07</span></a></li>
+						<li><a href="#" title="Travel and Tourism">Travel and Tourism<span>11</span></a></li>
+						<li><a href="#" title="Financial Services">Financial Services<span>13</span></a></li>
+						<li><a href="#" title="Automotive Section">Automotive Section<span>07</span></a></li>
+					</ul>
+				</aside>
+				<aside class="widget widget-latestposts">
+					<h3 class="widget-title">Recent Updates</h3>
+					<div class="latest-block">
+						<div class="latest-content">
+							<a href="blogpost-page.html"><img src="images/recentupdate1.jpg" alt="recentupdate1" width="72" height="77"/></a>
+							<h3><a href="blogpost-page.html" title="Goodness lemur save much alas crud dear">Goodness lemur save much alas crud dear</a></h3>
+							<span>09 Oct 2015</span>
+						</div>
+						<div class="latest-content">
+							<a href="blogpost-page.html"><img src="images/recentupdate2.jpg" alt="recentupdate2" width="72" height="77"/></a>
+							<h3><a href="blogpost-page.html" title="However much enor mous merrily jeez">However much enor mous merrily jeez</a></h3>
+							<span>22 Nov 2015</span>
+						</div>
+						<div class="latest-content">
+							<a href="blogpost-page.html"><img src="images/recentupdate3.jpg" alt="recentupdate3" width="72" height="77"/></a>
+							<h3><a href="blogpost-page.html" title="Flinched more mam moth this pomper">Flinched more mam moth this pomper</a></h3>
+							<span>04 Dec 2015</span>
+						</div>
+					</div>
+				</aside>
+				<aside class="widget widget-catagories widget-archives">
+					<h3 class="widget-title">Archives</h3>
+					<ul>
+						<li><a href="#" title="November">November 2015<span>15</span></a></li>
+						<li><a href="#" title="October">October 2015<span>08</span></a></li>
+						<li><a href="#" title="September">September 2015<span>25</span></a></li>
+						<li><a href="#" title="August">August 2015<span>18</span></a></li>
+						<li><a href="#" title="July">July 2015<span>22</span></a></li>
+						<li><a href="#" title="June">June 2015<span>06</span></a></li>
+					</ul>
+				</aside>
+				<aside class="widget widget-tag">
+					<h3 class="widget-title">Populer tags</h3>
+					<div class="tags">
+						<a href="#" title="Fashion">Fashion</a>
+						<a href="#" title="Discount">Discount</a>
+						<a href="#" title="Food">Food</a>
+						<a href="#" title="Home Tools">Home Tools</a>
+						<a href="#" title="Sale">Sale</a>
+						<a href="#" title="Movies">Movies</a>
+						<a href="#" title="Technology">Technology</a>
+						<a href="#" title="Photography">Photography</a>
+					</div>
+				</aside>
+			</div>
+		</div>
+		<div class="section-padding"></div>
+	</div>
+	<!-- Blog /- -->
+	<!-- Footer Main -->
+	<footer class="footer-main container-fluid no-padding">
+		<div class="footer-main-block">
+			<!-- Container -->
+			<div class="container">
+				<div class="row">
+					<!-- Support Center -->
+					<aside class="col-md-2 col-sm-6 col-xs-6 ftr-widget widget_support">
+						<h3 class="widget-title">Support Center</h3>
+						<ul>
+							<li><a title="Using a Coupon" href="#">Using a Coupon</a></li>
+							<li><a title="Submitting a Coupon" href="#">Submitting a Coupon</a></li>
+							<li><a title="Managing My Account" href="#">Managing My Account</a></li>
+							<li><a title="Merchant Help" href="#">Merchant Help</a></li>
+						</ul>
+					</aside><!-- Support Center /- -->
+					
+					<!-- Speical Pages -->
+					<aside class="col-md-3 col-sm-6 col-xs-6 ftr-widget widget_pages">
+						<h3 class="widget-title">Speciality pages</h3>
+						<ul>
+							<li><a title="Black Friday Deals" href="#">Black Friday Deals</a></li>
+							<li><a title="Cyber Monday Deals" href="#">Cyber Monday Deals</a></li>
+							<li><a title="Christmas Sales" href="#">Christmas Sales</a></li>
+							<li><a title="Free Shipping" href="#">Free Shipping</a></li>
+						</ul>
+					</aside><!-- Speical Pages /- -->
+					
+					<!-- ContactUs -->
+					<aside class="col-md-3 col-sm-6 col-xs-6 ftr-widget widget_contactus">
+						<h3 class="widget-title">Contact Us</h3>
+						<div class="contactinfo-box">
+							<i class="fa fa-map-marker"></i>
+								<p>09 Design Street, Mitri, Victoria, Australia.</p>
+						</div>
+						<div class="contactinfo-box">
+							<i class="fa fa-phone"></i>
+							<p>
+								<a title="0112345678" href="tel:+0112345678">+01 123 456 78</a>
+								<a title="0112355689" href="tel:+0112355689">+01 123 556 89</a>
+							</p>
+						</div>
+						<div class="contactinfo-box">
+							<i class="fa fa-map-marker"></i>
+							<p>
+								<a href="mailto:xyz123@testing.com" title="Info@OurDomain.Com">Info@OurDomain.Com</a>
+								<a href="mailto:xyz123@testing.com" title="Support@OurDomain.Com">Support@OurDomain.Com</a>
+							</p>
+						</div>
+					</aside><!-- ContactUs /- -->
+					
+					<!-- NewsLetter Widget -->
+					<aside class="col-md-4 col-sm-6 col-xs-6 ftr-widget widget_newsletter">
+						<h3 class="widget-title">Subscribe</h3>
+						<p>Got a dream and we just know now we're gonna make our dream come true</p>
+						<div class="input-group">
+							<input type="text" placeholder="Enter Address" class="form-control">
+							<span class="input-group-btn">
+								<button type="button" title="Subscribe" class="btn">Go</button>
+							</span>
+						</div>
+					</aside><!-- NewsLetter Widget /- -->
+				</div>
+				<!-- Footer Bottom -->
+				<div class="footer-bottom">
+					<div class="footer-menu">
+						<nav class="navbar ow-navigation">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div id="navbar2" class="navbar-collapse collapse">
+								<ul class="nav navbar-nav">
+									<li><a href="index.html" title="Home">Home</a></li>
+									<li><a href="#" title="About Us">About Us</a></li>
+									<li><a href="#" title="Services">Services</a></li>
+									<li><a href="#" title="Store">Stores</a></li>
+									<li><a href="#" title="Carres">Carres</a></li>
+									<li><a href="blog-page.html" title="Blog">Blog</a></li>
+									<li><a href="#" title="Press">Press</a></li>
+									<li><a href="#" title="List your business">List your business</a></li>
+									<li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+									<li><a href="#" title="Terms or Serivces">Terms or serivces</a></li>
+									<li><a href="#" title="Sitemap">Sitemap</a></li>
+									<li><a href="contactus-page.html" title="Contact Us">Contact Us</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+					<div class="footer-about">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12 ftr-about">
+								<h3 class="widget-title">About Us</h3>
+								<p>Said Californ'y is the place you ought to be So they loaded up the truck and moved to Beverly. Hills that is. Swimmin' pools movie stars. Straightnin' the curves. Flatnin' the hills Someday the mountain might get ‘em but the law never will.</p>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-12 ftr-social">
+								<h3 class="widget-title">Connect with us</h3>
+								<ul>
+									<li><a title="Facebook" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a title="Twitter" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a title="Google Plus" data-toggle="tooltip" href="#"><i class="fa fa-google-plus"></i></a></li>
+									<li><a title="Linkedin" data-toggle="tooltip" href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a title="Dribbble" data-toggle="tooltip" href="#"><i class="fa fa-dribbble"></i></a></li>
+									<li><a title="Pinterest" data-toggle="tooltip" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div><!--  Footer Bottom /- -->
+			</div><!-- Container /- -->
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<p>Copyright &copy; 2016 - All Rights Reserved</p>
+			</div>
+		</div>
+	</footer><!-- Footer /- -->
+	
+	<!-- JQuery v1.11.3 -->	
+	<script src="js/jquery.min.js"></script>
+	<!--script src="js/jquery.knob.js"></script-->
+	
+	<!-- Library - Js -->
+	<script src="libraries/lib.js"></script><!-- Bootstrap JS File v3.3.5 -->
+	
+	<!-- Library - Google Map API -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	
+	<!-- Library - Theme JS -->
+	<script src="js/functions.js"></script>
+</body>
+
+<!-- Mirrored from premiumlayers.net/demo/html/geodeo/blogpost-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Mar 2018 13:18:30 GMT -->
+</html>

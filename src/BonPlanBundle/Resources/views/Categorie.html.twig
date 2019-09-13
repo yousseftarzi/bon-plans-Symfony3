@@ -1,0 +1,29 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+
+
+{% block first %}
+
+    <!-- PopularCategory -->
+    <div class="container popularcategory">
+        <div class="section-padding"></div>
+        <div class="section-header">
+            <h3>Browse By Categories</h3>
+        </div>
+        <div class="row">
+            {% for cat in c %}
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset("uploads/images/#{cat.image}" )}}" alt="categories1"/>
+                    </div>
+                    <div class="category-content">
+                        <a href={{ path('dealsByCategorie',{'id':cat.id}) }}>{{ cat.nom }}</a>
+                    </div>
+                </div>
+            </div>
+                {% endfor %}
+        </div>
+        <div class="section-padding"></div>
+    </div><!-- PopularCategory /- -->
+
+{% endblock %}

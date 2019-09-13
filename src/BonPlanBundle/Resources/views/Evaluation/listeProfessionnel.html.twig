@@ -1,0 +1,45 @@
+{% extends "BonPlanBundle:Default:base.html.twig" %}
+{% block first %}
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver2 m-b-110">
+                <div class="table100-head">
+                    <table>
+                        <thead>
+                        <tr class="row100 head">
+                            <th class="cell100 column1">Photo</th>
+                            <th class="cell100 column1">Nom</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table100-body js-pscroll">
+                    <table>
+                        <tbody>
+                        {%  for pro in professionnels %}
+
+                            <tr class="row100 body"  >
+                                <td> <a href="{{ path('single_evaluation',{'id':pro.id}) }}"  > <img src="{{ asset(pro.photoDeProfil) }}" width="200" height="100" alt="deal1"></a></td>
+                                <td> {{ pro.prenom }}</td>
+                                <td class="cell100 column2"><a href="{{ path('init_evaluation',{'id':pro.id,'idCategorie':pro.idCategorie.id}) }}"><button type="button" class="btn btn-primary">Evaluer</button></a></td>
+                        </tr>
+                        {% endfor %}
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+
+
+
+                        {% endblock %}
+
+

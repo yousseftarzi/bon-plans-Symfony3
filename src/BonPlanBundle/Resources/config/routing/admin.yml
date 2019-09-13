@@ -1,0 +1,47 @@
+home_admin:
+    path:     /
+    defaults: { _controller: BonPlanBundle:Admin:index }
+
+categorie_admin:
+    path:     /categorie
+    defaults: { _controller: BonPlanBundle:Admin:categorie }
+
+modifiercategorie_admin:
+    path:     /modifiercategorie/{id}
+    defaults: { _controller: BonPlanBundle:Admin:modifierCategorie  }
+
+ajoutcritere_admin:
+    path:     /ajoutercritere/{id}
+    defaults: { _controller: BonPlanBundle:Admin:ajouterCritere }
+
+modifiercritere_admin:
+    path:     /modifiercritere/{id}
+    defaults: { _controller: BonPlanBundle:Admin:modifierCritere }
+
+supprimercritere_admin:
+    path:     /supprimercritere/{id}
+    defaults: { _controller: BonPlanBundle:Admin:supprimerCritere }
+motInterdit_admin:
+    path:    /motInterdit
+    defaults: { _controller: BonPlanBundle:Admin:afficherMotInterdit}
+motInterdit_ajouter:
+    path:     /ajouterMot
+    defaults: { _controller: BonPlanBundle:Admin:ajouterMotInterdit}
+motInterdit_modification:
+    path:     /modifierMot/{id}
+    defaults: { _controller: BonPlanBundle:Admin:ModifierMotInterdit}
+motInterdit_suppression:
+    path:     /supprimerMot/{id}
+    defaults: { _controller: BonPlanBundle:Admin:SupprimerMotInterdit}
+
+bonPlan_admin:
+    path:     /bonPlan
+    defaults: { _controller: BonPlanBundle:Admin:bonPlan}
+
+bonPlan_suppression:
+    path:     /supprimerbonPlan/{id}
+    defaults: { _controller: BonPlanBundle:Admin:SupprimerbonPlan}
+
+
+
+

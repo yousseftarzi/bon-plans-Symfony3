@@ -1,0 +1,321 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+{% block first %}   <div id="deal-section" class="container deal-section">
+    <div class="section-padding"></div>
+    <div class="section-header">
+        <h3>Hot Deals & Discount Coupons + Extra Cashback Offers</h3>
+        <p>Today's hot deals handpicked by our Team. Hurry up before they run out!</p>
+    </div>
+    <div class="row">
+        <!-- Bon Plan -->
+        {% for l in BonPlans %}
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <div class="dealbox">
+                    <div class="deal-thmbimg">
+                        <img src="{{ asset('image/'~l.imageName)}}" width="370" height="247" alt="deal1"/>
+                        <!-- change effacer 15%-->
+                    </div>
+                    <div class="deal-content">
+                        <h3>{{ l.titre }}</h3>
+                        <p>{{ l.description }}</p>
+                        <p>Auteur {{ l.loginAuteur }}</p>
+
+
+
+                        <a href="{{ path('add_reservation',{'id':l.id}) }}" title ="Get this deal" class="getdeal-btn" ><!--style="pointer-events: none;
+   cursor: default;"-->
+                            <span class="get-coupencode">12xjuox</span>
+                            <span class="getdeal">Reserver</span>
+                        </a>
+
+                        <div class="expire"><span>Expire :</span> 27-12-2015</div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+    <div class="section-padding"></div>
+    </div>{% endblock %}
+
+
+{% block second %}
+    <div id="shopingbrands" class="container-fluid no-padding shopingbrands">
+        <div class="section-padding"></div>
+
+        <div class="section-padding"></div>
+    </div>
+{% endblock %}
+
+{% block third %}
+    <div class="container popularcategory">
+        <div class="section-padding"></div>
+        <div class="section-header">
+            <h3>Browse By Popular Categories</h3>
+            <p>Want more?Start by Exploring the categories</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories1.jpg')}}" alt="categories1" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-Espresso"></span>
+                        <a href="#" title="Kitchen Item">kitchen items</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories2.jpg')}}" alt="categories2" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-Phone"></span>
+                        <a href="#" title="Mobile & Tablets">Mobile & Tablets</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories3.jpg')}}" alt="categories3" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-Tshirt"></span>
+                        <a href="#" title="Fashion">Fashion</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories4.jpg')}}" alt="categories4" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-Pizza"></span>
+                        <a href="#" title="Food & Dining">Food & Dining</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories5.jpg')}}" alt="categories5" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-DesktopMonitor"></span>
+                        <a href="#" title="Computers">Computers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories6.jpg')}}" alt="categories6" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-House"></span>
+                        <a href="#" title="Furniture & Decor">furniture & Decor</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories7.jpg')}}" alt="categories7" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-Plaine"></span>
+                        <a href="#" title="Travel">Travel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="categorybox">
+                    <div class="category-img">
+                        <img src="{{ asset('bundles/espritparc/images/categories8.jpg')}}" alt="categories8" width="270" height="211"/>
+                    </div>
+                    <div class="category-content">
+                        <span class="icon icon-Pulse"></span>
+                        <a href="#" title="Beauty & Health">Beauty & Health</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-padding"></div>
+    </div>
+{% endblock %}
+
+{% block fourth %}
+    <div class="container-fluid no-padding shoptrading">
+        <div class="section-padding"></div>
+        <div class="container">
+            <div class="section-header">
+                <h3>Shop today's trending deals and save big</h3>
+                <p>Save big with our recommended deals in all categories</p>
+            </div>
+            <div id="shoptrading-carousel" class="shoptrading-carousel">
+                <div class="tradingbox">
+                    <img src="{{ asset('bundles/espritparc/images/shoptrading1.jpg')}}" alt="shoptrading1" width="230" height="110"/>
+                    <p>Flat $ 500 Off on a Minimum Bill of $ 1,000</p>
+                    <a href="#" title="view this offer">view this offer</a>
+                </div>
+                <div class="tradingbox">
+                    <img src="{{ asset('bundles/espritparc/images/shoptrading2.jpg')}}" alt="shoptrading2" width="230" height="110"/>
+                    <p>Flat 10% Off on Purchase Worth $ 500</p>
+                    <a href="#" title="view this offer">view this offer</a>
+                </div>
+                <div class="tradingbox">
+                    <img src="{{ asset('bundles/espritparc/images/shoptrading3.jpg')}}" alt="shoptrading3" width="230" height="110"/>
+                    <p>$ 350 Off on $ 999 (New Customer) </p>
+                    <a href="#" title="view this offer">view this offer</a>
+                </div>
+                <div class="tradingbox">
+                    <img src="{{ asset('bundles/espritparc/images/shoptrading4.jpg')}}" alt="shoptrading4" width="230" height="110"/>
+                    <p>Additional 20% OFF on Men's Clothing</p>
+                    <a href="#" title="view this offer">view this offer</a>
+                </div>
+            </div>
+        </div>
+        <div class="section-padding"></div>
+    </div>
+{% endblock %}
+
+{% block fifth %}
+    <div class="container latestblog">
+        <div class="section-padding"></div>
+        <div class="section-header">
+            <h3>latest updates of coupons</h3>
+            <p>Recent News from our blog</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <article class="type-post">
+                    <div class="entry-cover">
+                        <a href="blogpost-page.html" title="Entry Cover"><img src="{{ asset('bundles/espritparc/images/latestblog1.jpg')}}" alt="latestblog1" width="370" height="310"/></a>
+                        <div class="entrycover-shape"></div>
+                        <span class="icon icon-Picture"></span>
+                    </div>
+                    <div class="entrycontent-block">
+                        <div class="entry-meta">
+                            <div class="post-date">27 November 2015</div>
+                        </div>
+                        <h3 class="entry-title">
+                            <a title="Your heart is true you're a pal" href="blogpost-page.html">Your heart is true you're a pal</a>
+                        </h3>
+                        <div class="entry-content">
+                            <p>And we know Flipper lives in a world full of wonder flying there-under under the sea. Here's the story of a lovely.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <article class="type-post">
+                    <div class="entry-cover">
+                        <a href="blogpost-page.html" title="Entry Cover"><img src="{{ asset('bundles/espritparc/images/latestblog2.jpg')}}" alt="latestblog2" width="370" height="310"/></a>
+                        <div class="entrycover-shape"></div>
+                        <span class="icon icon-Picture"></span>
+                    </div>
+                    <div class="entrycontent-block">
+                        <div class="entry-meta">
+                            <div class="post-date">27 November 2015</div>
+                        </div>
+                        <h3 class="entry-title">
+                            <a title="Movin' on up to the east side" href="blogpost-page.html">Movin' on up to the east side</a>
+                        </h3>
+                        <div class="entry-content">
+                            <p>Got a dream and we just know now we're gonna make our dream come true. Flying away on a wing and a prayer.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+                <article class="type-post">
+                    <div class="entry-cover">
+                        <a href="blogpost-page.html" title="Entry Cover"><img src="{{ asset('bundles/espritparc/images/latestblog3.jpg')}}" alt="latestblog3" width="370" height="310"/></a>
+                        <div class="entrycover-shape"></div>
+                        <span class="icon icon-Picture"></span>
+                    </div>
+                    <div class="entrycontent-block">
+                        <div class="entry-meta">
+                            <div class="post-date">27 November 2015</div>
+                        </div>
+                        <h3 class="entry-title">
+                            <a title="Took a whole lotta tryin' just" href="blogpost-page.html">Took a whole lotta tryin' just</a>
+                        </h3>
+                        <div class="entry-content">
+                            <p>And they're always glad you came. A man is born he's a man of means. Then along come two they got nothin.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="section-padding"></div>
+    </div>
+{% endblock %}
+
+{% block sixth %}
+    <div class="container-fluid no-padding getoffers">
+        <div class="section-padding"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <img src="{{ asset('bundles/espritparc/images/getoffer.png')}}" alt="getoffer" width="434" height="548"/>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="getoffer-content">
+                        <h3>We have an App for you</h3>
+                        <p>It's time to put on makeup. It's time to dress up right. It's time to raise the curtain on the Muppet Show tonight. Just two good ol' boys.</p>
+                        <ul>
+                            <li><a title="1 Star" href="#"><i aria-hidden="true" class="fa fa-star"></i></a></li>
+                            <li><a title="2 Star" href="#"><i aria-hidden="true" class="fa fa-star"></i></a></li>
+                            <li><a title="3 Star" href="#"><i aria-hidden="true" class="fa fa-star"></i></a></li>
+                            <li><a title="4 Star" href="#"><i aria-hidden="true" class="fa fa-star"></i></a></li>
+                            <li><a title="5 Star" href="#"><i aria-hidden="true" class="fa fa-star"></i></a></li>
+                        </ul>
+                        <span>4.0/5 From 52 reviews</span>
+                        <a href="#" title="Download our app">Download our app</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block seventh %}
+    <div class="container-fluid no-padding counter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <img src="{{ asset('bundles/espritparc/images/coutner1.png')}}" alt="coutner1" width="53" height="36"/>
+                    <div class="statistics-content">
+                        <span data-statistics_percent="1234567" id="statistics_count-1">1234567</span>
+                    </div>
+                    <p>Coupons Used Last Month</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <img src="{{ asset('bundles/espritparc/images/coutner2.png')}}" alt="coutner2" width="44" height="33"/>
+                    <div class="statistics-content">
+                        <span data-statistics_percent="9876" id="statistics_count-2">9876</span>
+                    </div>
+                    <p>Coupons Used Last Month</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <img src="{{ asset('bundles/espritparc/images/coutner3.png')}}" alt="coutner3" width="44" height="35"/>
+                    <div class="statistics-content">
+                        <span>24 Hours</span>
+                    </div>
+                    <p>Coupons Used Last Month</p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <img src="{{ asset('bundles/espritparc/images/coutner4.png')}}" alt="coutner4" width="45" height="44"/>
+                    <div class="statistics-content">
+                        <span data-statistics_percent="960125" id="statistics_count-3">960125</span>
+                    </div>
+                    <p>Coupons Used Last Month</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

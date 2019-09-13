@@ -1,0 +1,89 @@
+{% extends "BonPlanBundle:Default:index.html.twig" %}
+
+
+{% block second %}
+
+    <script>
+        window.event_submit_path = '{{ path('add_reservation',{id:'id'}) }}';
+    </script>
+    <!-- add calander in this div -->
+    <div class="container">
+        <div class="row">
+            <div id="calendar"></div>
+
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="createEventModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add reservation</h4>
+                </div>
+
+                <div class="modal-footer">
+
+
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="submitButton">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+
+
+
+        $(function () {
+
+
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev, next',
+                    center: 'title',
+                    right: 'month, basicWeek, basicDay,'
+                },
+                lazyFetching: true,
+                timeFormat: {
+                    agenda: 'h:mmt',
+                    '': 'h:mmt'
+                },  eventSources:[
+
+                    // your event source
+                    {
+                        url: '/Ponblan11/web/app_dev.php/loadevent', // use the `url` property
+                        color: '#ff9501',    // an option!
+                        textColor: '#000000',  // an option!
+                    }
+
+                    // any other sources...
+
+                ],
+                eventClick:function (event) {
+                    if (event.url) {
+                        window.open(event.url);
+                        return false;
+                    }
+
+                }
+
+
+
+
+
+
+            });
+        });
+
+
+    </script>
+
+{% endblock %}

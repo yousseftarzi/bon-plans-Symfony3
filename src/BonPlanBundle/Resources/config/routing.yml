@@ -1,0 +1,236 @@
+bon_plan_user:
+    resource: "@BonPlanBundle/Resources/config/routing/utilisateur.yml"
+    prefix:   /user
+
+admin:
+    resource: "@BonPlanBundle/Resources/config/routing/admin.yml"
+    prefix:   /admin
+
+gregwar_captcha.generate_captcha:
+    path:     /generate-captcha/{key}
+    defaults: { _controller: BonPlanBundle:Default:generateCaptcha }
+
+home:
+    path:     /
+    defaults: { _controller: BonPlanBundle:Default:index }
+Deals:
+    path:     /Deals
+    defaults: { _controller: BonPlanBundle:Default:Deals }
+
+singleBonPlan:
+    path:     /singleBp/{id}
+    defaults: { _controller: BonPlanBundle:Default:singleBonPlan }
+
+listBonPlanneur:
+    path:     /listBonPlanneur
+    defaults: { _controller: BonPlanBundle:Default:listBonPlanneur }
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+BonPlanDetails:
+    path:     /bp
+    defaults: { _controller: BonPlanBundle:Default:BonPlanDetails }
+profile:
+    path:     /prof
+    defaults: { _controller: BonPlanBundle:Default:profile }
+ajouterBonPlan:
+    path:     /ajouteBp
+    defaults: { _controller: BonPlanBundle:Default:AjoutBonPlan }
+
+
+
+
+
+
+
+
+
+add_reservation:
+    path:     /add/{id}
+    defaults: { _controller: BonPlanBundle:Reservation:add }
+aff:
+    path:     /afficher
+    defaults: { _controller: BonPlanBundle:Reservation:listReservation }
+modif:
+    path:     /mod/{id}
+    defaults: { _controller: BonPlanBundle:Reservation:update }
+admin:
+    path: /admin
+    defaults: { _controller: BonPlanBundle:Default:indexadmin}
+reservation_affiche:
+    path: /adminR
+    defaults: { _controller: BonPlanBundle:Reservation:listReservationa}
+modifa:
+    path:     /moda/{id}
+    defaults: { _controller: BonPlanBundle:Reservation:aupdate }
+affiche_user:
+    path:     /adminU
+    defaults: { _controller: BonPlanBundle:Utilisateur:index }
+affiche_profile_user:
+    path:     /adminUt/{id}
+    defaults: { _controller: BonPlanBundle:Utilisateur:show }
+delete_profile_user:
+    path:     /adminUd/{id}
+    defaults: { _controller: BonPlanBundle:Utilisateur:Udelete }
+affiche_bon_plan:
+    path:     /adminBP
+    defaults: { _controller: BonPlanBundle:Default:Aindex }
+delete_reservation:
+    path:     /delete/{id}
+    defaults: { _controller: BonPlanBundle:Reservation:delete }
+render_event:
+    path:     /render-event
+    defaults: { _controller: BonPlanBundle:Reservation:RenderEvent }
+afficher_res_prof:
+    path:     /profileR/{id}
+    defaults: { _controller: BonPlanBundle:Reservation:indexR }
+    options :
+        expose: true
+
+loadevent:
+    path:     /loadevent
+    defaults: { _controller: BonPlanBundle:Calendar:DataEvent }
+calen:
+    path:     /cal
+    defaults: { _controller: BonPlanBundle:Calendar:load }
+    options :
+            expose: true
+    options :
+            expose: true
+
+
+
+categories:
+    path:     /categories
+    defaults: { _controller: BonPlanBundle:Categorie:afficherCategorie }
+
+
+dealsByCategorie:
+    path:     /deals/{id}
+    defaults: { _controller: BonPlanBundle:Categorie:afficherBonplanByCat}
+
+
+
+
+
+
+
+
+
+badge_checkreserver:
+    path:     /CheckBadgeReservation
+    defaults: { _controller: BonPlanBundle:Badge:CheckBadgeReserver }
+
+badge_checkevaluer:
+    path:     /CheckBadgeEvaluation
+    defaults: { _controller: BonPlanBundle:Badge:CheckBadgeEvaluer }
+
+badge_checknoter:
+    path:     /CheckBadgeNote
+    defaults: { _controller: BonPlanBundle:Badge:CheckBadgeNoter }
+
+badge_checkpublier:
+    path:     /CheckBadgePublication
+    defaults: { _controller: BonPlanBundle:Badge:CheckBadgePublier }
+
+reward_check:
+    path:     /rewardcheck
+    defaults: { _controller: BonPlanBundle:Badge:Reward }
+
+
+liste_Professionnel:
+    path:    /listePro
+    defaults: { _controller: BonPlanBundle:Evaluation:afficherPro}
+init_evaluation:
+    path:    /evaluer
+    defaults: { _controller: BonPlanBundle:Evaluation:initEvaluation}
+ajouter_evaluation:
+    path:    /ajouterEval
+    defaults: { _controller: BonPlanBundle:Evaluation:ajouterEvaluation}
+mes_evaluations:
+    path:    /mesEvaluations
+    defaults: { _controller: BonPlanBundle:Evaluation:afficherMesEvaluation}
+charger_evaluation:
+    path:    /chargerEvaluation
+    defaults: { _controller: BonPlanBundle:Evaluation:chargerEvaluation}
+modifier_evaluation:
+    path:    /modifierEvaluation
+    defaults: { _controller: BonPlanBundle:Evaluation:modifierEvaluation}
+supprimer_evaluation:
+    path:    /supprimerEvaluation
+    defaults: { _controller: BonPlanBundle:Evaluation:supprimerEvaluation}
+recommandation:
+    path:    /recommandation
+    defaults: { _controller: BonPlanBundle:Evaluation:afficherRecommandation}
+modifier_commentaire:
+    path:    /modifierComm
+    defaults: { _controller: BonPlanBundle:Commentaire:ModifierCommentaire }
+supprimer_commentaire:
+    path:    /supprimerComm
+    defaults: { _controller: BonPlanBundle:Commentaire:SupprimerCommentaire }
+single_evaluation:
+    path:    /singleEvaluation
+    defaults: { _controller: BonPlanBundle:Evaluation:singleEvaluation}
+pdf:
+    path:    /pdf
+    defaults: { _controller: BonPlanBundle:Evaluation:pdf}
+
+
+
+ajouter_abonnement:
+    path:     /ajouteAbo
+    defaults: { _controller: BonPlanBundle:Abonnement:AjoutAbonnement }
+ajaxepage:
+    path:     /Ajax
+    defaults: { _controller: BonPlanBundle:Abonnement:ajax }
+ajaxedelet:
+    path:     /Ajax/{id}
+    defaults: { _controller: BonPlanBundle:Abonnement:delete}
+chart_homepage:
+    path:     /stats
+    defaults: { _controller:  BonPlanBundle:Abonnement:stats }
+affichage:
+    path:     /affichage
+    defaults: { _controller: BonPlanBundle:Abonnement:afficher_Abo }
+add_rec:
+    path:     /add_rec
+    defaults: { _controller: BonPlanBundle:Reclamation:add}
+
+modifierBonplan:
+    path:     /update/{id}
+    defaults: { _controller: BonPlanBundle:Default:modifierbonplan }
+
+supprimerBonplan:
+    path:     /supprimer{id}
+    defaults: { _controller: BonPlanBundle:Default:supprimer }
+
+recherche:
+    path:     /recherche
+    defaults: { _controller: BonPlanBundle:Default:rechercher }
+
+rate:
+    path:     /rate
+    defaults: { _controller: BonPlanBundle:Default:rate }
+
+register:
+    path:   /register
+
+login:
+    path:   /login
